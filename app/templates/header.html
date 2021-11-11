@@ -1,6 +1,8 @@
 <div class="row header">
-    <div class="col-2">картинка</div>
-    <div class="offset-5 col-5 row header-links">
+    <div class="col-3 row header-badge">
+        <img class="col" width="156px" height="35px" src="{{ url_for('static', filename='img/Logo Kaleidoscope.webp') }}" alt="Картинка">
+    </div>
+    <div class="offset-4 col-5 row header-links">
         <a class="col" href="#">Home</a>
         <a class="col" href="#">Contacts</a>
         <a class="col" href="#">Avia</a>
@@ -11,11 +13,18 @@
 
 <style>
     .header {
-        height: 120px;
+        height: 50px;
         border: 1px solid black;
     }
+    .header-links {
+        align-items: center;
+    }
     .header-links a {
-        align-self: center;
         text-decoration: none;
+        text-align: center;
+    }
+    .header-badge img {
+        align-self: center;
+        margin: 0 40px;
     }
 </style>
