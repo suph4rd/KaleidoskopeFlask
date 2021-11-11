@@ -1,4 +1,4 @@
-import views
+from app import views
 
 
 def set_urls(app):
