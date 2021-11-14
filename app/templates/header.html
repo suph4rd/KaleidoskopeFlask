@@ -1,30 +1,25 @@
-<div class="row header">
-    <div class="col-3 row header-badge">
-        <img class="col" width="156px" height="35px" src="{{ url_for('static', filename='img/Logo_Kaleidoscope.webp') }}" alt="Картинка">
+<nav class="navbar navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <a href="{{ url_for('index') }}">
+        <img width="156px" height="35px" src="{{ url_for('static', filename='img/Logo_Kaleidoscope.webp') }}" alt="Картинка">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            {% for obj in content_qs %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ obj.link }}">{{ obj.type }}</a>
+              </li>
+            {% endfor %}
+        </ul>
+      </div>
     </div>
-    <div class="offset-4 col-5 row header-links">
-        <a class="col" href="#">Home</a>
-        <a class="col" href="#">Contacts</a>
-        <a class="col" href="#">Avia</a>
-        <a class="col" href="#">Medical</a>
-        <a class="col" href="#">Trading</a>
-    </div>
-</div>
-
-<style>
-    .header {
-        height: 50px;
-        border-bottom: 1px solid black;
-    }
-    .header-links {
-        align-items: center;
-    }
-    .header-links a {
-        text-decoration: none;
-        text-align: center;
-    }
-    .header-badge img {
-        align-self: center;
-        margin: 0 40px;
-    }
-</style>
+  </div>
+</nav>
