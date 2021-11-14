@@ -1,5 +1,5 @@
 {% for obj in content_qs %}
-    <div {% if obj.img  %} style="background-image: url('{{ url_for('media', filename=obj.img) }}')" {% endif %}>
+    <div class="content-item" {% if obj.img  %} style="background-image: url('{{ url_for('media', filename=obj.img) }}')" {% endif %}>
         {{ obj.content|safe }}
     </div>
 {% endfor %}
