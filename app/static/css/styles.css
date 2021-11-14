@@ -6,13 +6,17 @@
 
 
 /* Content */
-.container {
+.content {
     margin-top: 65px;
+}
+.content-item {
+    border-radius: 5px;
 }
 
 
 /* Footer */
 .footer {
     text-align: center;
-    border-top: 1px solid black;
 }
+
+/* General */
