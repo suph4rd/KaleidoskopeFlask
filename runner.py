@@ -1,6 +1,6 @@
-from app import app
+from app import create_app
 from settings import Config
 
 
-if __name__ == '__main__':
-    app.run(port=Config.PORT)
+app = create_app()
+app.run(port=Config.PORT)
